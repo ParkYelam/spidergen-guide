@@ -39,13 +39,13 @@
 1 레이아웃의 TextBox를 더블 클릭해서 Text를 설정할 수 있습니다<br>
 2 Attribute pane에서 Text에 입력해서 설정할 수 있습니다.<br>
 
-### 2.소스코딩을 이용하여 TextBox에 설정된 텍스트를 얻어오기.<br>
+### 2.소스코딩을 이용하여 TextBox에 설정된 텍스트를 console에 출력하기.<br>
  * ainView.cls 파일을 오픈합니다.<br>
  * 상단의 파일탭에서 MainView.lay 탭을 더블 클릭하거나 우측의 프로젝트 트리에서 MainView.cls 파일을 더블 클릭합니다.<br>
  * 모든 화면뷰는 onInitDone() 함수가 존재하며 이 함수는 화면이 생성될 때 딱 한번 실행됩니다.<br>
  * onInitDone() 함수에서 아래와 같이 코드를 입력합니다.<br>
 
-```
+```javascript
 function MainView*onInitDone()
 {
 	super.onInitDone();

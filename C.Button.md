@@ -43,7 +43,7 @@
 
 ### 3. 추가된 매핑 함수에 아래와 같이 버튼이 클릭될 시 토스트 메시지를 출력하게 수정합니다.
 
-```
+```javascript
 function MainView*onAButtonClick(comp, info, e)
 {
 
@@ -51,7 +51,11 @@ function MainView*onAButtonClick(comp, info, e)
 
 };
 ```
-### 4. F5를 누르거나 Build > Run Project 를 클릭하여 프로젝트를 Run 합니다.
+
+### 4. AToast.js 로드하기
+[00.Default_Load_Settings](.\Default_Load_Settings.md) 을 참조해주세요.
+
+### 5. F5를 누르거나 Build > Run Project 를 클릭하여 프로젝트를 Run 합니다.
 
 <img src="./img/button3.png" height="350px" width="700px"><br>
 

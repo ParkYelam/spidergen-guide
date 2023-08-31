@@ -68,11 +68,7 @@
 |ATextField|width:80px, height:22px|left:10px	
 |AButton|width:80px, height:22px|left:10px	|
 
-
-
-
 <img src="./img/flexlayout1.png" height="350px" width="700px"><br>
-
 
 ### 3.F5를 누르거나 Build > Run Project 를 클릭하여 프로젝트를 Run 합니다
 

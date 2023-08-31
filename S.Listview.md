@@ -57,7 +57,7 @@
 ### 4. 먼저 리스트뷰에 추가할 데이터를 만들고 아이템뷰를 리스트합니다.
 
 *  MainView.cls 파일을 오픈하고 다음과 같이 클래스에 멤버변수를 만들고 데이터를 설정합니다.
-```
+```javascript
 class MainView()
 {
 	super();
@@ -86,7 +86,7 @@ class MainView()
 extends AView;
 
 ```
-```
+```javascript
 function MainView*onActiveDone(isFirst)
 {
 	super.onActiveDone(isFirst);
@@ -98,7 +98,7 @@ function MainView*onActiveDone(isFirst)
 
 ### 5.리스트 되는 ItemView를 수정해서 이미지와 레이블 내용을 추가하겠습니다.
 * ItemView.cls 파일을 오픈하고 클래스에 설정되는 데이터를 저장하기 위한 멤버 변수를 추가합니다.
-```
+```javascript
 class ItemView()
 {
 	super();
@@ -111,7 +111,7 @@ extends AView;
 ```
 ### 6. 데이터가 바인딩 될때 호출되는 setData 메소드를 추가하고 내용을 다음과 같이 수정합니다.
 
-```
+```javascript
 
 function ItemView*setData(data)
 {
@@ -122,7 +122,7 @@ function ItemView*setData(data)
 };
 ```
 ### 7. Btn001 에 click 이벤트를 설정합니다
-```
+```javascript
 function ItemView*onBtn001Click(comp, info, e)
 {
 

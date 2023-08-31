@@ -35,7 +35,7 @@
 
 ### 4. InnerView 버튼에 Click 이벤트를 설정합니다.
 
-```
+```javascript
 function InnerView0*onAButton1Click(comp, info, e)
 {
 
@@ -49,7 +49,7 @@ function InnerView0*onAButton1Click(comp, info, e)
 
  ### 5.MainView.cls 파일을 오픈하고 다음과 같이 소스 내용을 수정합니다.
  * cnt 멤버변수를 추가합니다. 이 변수는 현재 추가되는 뷰의 카운트를 저장하는 변수입니다
- ```
+ ```javascript
  class MainView()
 {
 	super();
@@ -62,7 +62,7 @@ extends AView;
 
 ### 6. Add 버튼에 Click 이벤트를 설정합니다.
  * 버튼이 클릭되면 카운트 멤버변수를 이용해서 InnerView를 Insert 합니다.
-```
+```javascript
 function MainView*onBtnAddViewClick(comp, info, e)
 {
     if(this.cnt >= 2){

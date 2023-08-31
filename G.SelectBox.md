@@ -24,7 +24,7 @@
 
 * 클래스 함수에 멤버변수 data를 생성합니다
 
-```
+```javascript
 class MainView()
 {
 	super();
@@ -40,7 +40,7 @@ extends AView;
 ```
 
 * onInitDone() 함수에서 컴포넌트들의 초기화를 하고 첫번째 셀렉트박스 (select1)에 아이템 데이터를 추가합니다.
-```
+```javascript
 function MainView*onInitDone()
 {
 	super.onInitDone();
@@ -63,7 +63,7 @@ function MainView*onInitDone()
 * 첫번째 셀렉트박스 (select1)에 change 이벤트를 설정하고 설정 함수를 아래와 같이 추가합니다<br>
 * 첫번째 셀렉트박스 (select1)이 선택되면 두번째 셀렉트박스 (select2)에 아이템 데이터를 동적으로 추가합니다.
 
-```
+```javascript
 function MainView*onSelect1Change(comp, info, e)
 {
  //현재 셀렉트된 아이템의 data
@@ -89,7 +89,7 @@ function MainView*onSelect1Change(comp, info, e)
 };
 ```
 * 두번째 셀렉트박스(select2) 에 change 이벤트를 설정하고 설정 함수를 아래와 같이 수정합니다.
-```
+```javascript
 function MainView*onSelect2Change(comp, info, e)
 {
  //지역선택 아이템을 선택했을 경우 토스트 알림
@@ -113,7 +113,7 @@ function MainView*onSelect2Change(comp, info, e)
 * 마지막으로 onActiveDone 이벤트에 컴포넌트 초기값 설정을 아래 내용과 같이 수정합니다.<br>
 * 화면이 활성화 완료설정값을 초기화 하도록 합니다.
 
-```
+```javascript
  //화면 활성화가 완료될때마다 
 function MainView*onActiveDone(isFirst)
 {

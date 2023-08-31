@@ -46,7 +46,7 @@
 ### 3. MainView.cls 파일을 오픈하고 다음과 같이 소스 내용을 수정합니다.
 
  * MainView() 클래스 함수에 멤버변수를 추가 합니다.
-```
+```javascript
 class MainView()
 {
     super();
@@ -55,17 +55,17 @@ class MainView()
 extends AView; 
 ```
  * Init 이벤트 메소드에 체크박스에 접근하기 위한 배열을 위한 멤버변수를 등록합니다.
-```
+```javascript
 function MainView*init(context, evtListener)
 {
 	super.init(context, evtListener);
 
- this.chks = this.findCompByGroup('checks');     
+    this.chks = this.findCompByGroup('checks');     
 };
 ```
  * 버튼 컴포넌트에 클릭 이벤트를 다시 설정 합니다. Class Pane > Event > Click 우측 영역을 더블클릭하고 이벤트 메소드 함수명은 기본으로 등록합니다.<br>
  * 해당 이벤트 메소드의 내용은 다음과 같이 수정합니다.
-```
+```javascript
 function MainView*onBtnIDClick(comp, info, e)
 {
 

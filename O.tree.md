@@ -21,7 +21,7 @@
 <img src="./img/tree1.png" height="350px" width="800px"><br>
 
 ### 2.Mainview.cls 에서 내용을 아래와 같이 수정합니다.
-```
+```javascript
 function MainView*init(context, evtListener)
 {
 	super.init(context, evtListener);
@@ -38,7 +38,7 @@ function MainView*init(context, evtListener)
 };
 ```
 
-```
+```javascript
 function MainView*initTreeData(comp, info, e)
 {
 	var data = {
@@ -67,7 +67,7 @@ function MainView*initTreeData(comp, info, e)
 
 };
 ```
-```
+```javascript
 function MainView*insertItemInfo(info)
 	{
 		const item = this.tree.insertItemObj(info, true);
@@ -87,7 +87,7 @@ function MainView*insertItemInfo(info)
 
 ### 3. addbtn 에 click 이벤트를 설정합니다.
 
-```
+```javascript
 function MainView*onAddBtnClick(comp, info, e)
 {
 
@@ -108,8 +108,7 @@ function MainView*onAddBtnClick(comp, info, e)
 
 ### 3. Delbtn 에 click 이벤트를 설정합니다.
 
-```
-
+```javascript
 function MainView*onDelBtnClick(comp, info, e)
 {
 
@@ -117,7 +116,6 @@ function MainView*onDelBtnClick(comp, info, e)
 		if(item) this.tree.deleteItem(item);
 
 };
-
 ```
 
 

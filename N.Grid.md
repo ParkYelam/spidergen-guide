@@ -21,36 +21,115 @@
 ## b. Grid Example
 
 ### 1. MainView의 레이아웃에 컴포넌트를 추가합니다.<br>
- * grid id : gridID 로 설정해줍니다.
+
+* 아래 정보를 참고해서 컴포넌트를 배치합니다. 
+
+|component|ID|Text|
+|---------|--|----|
+|ALabel||Grid Sample1|
+|AGrid|simpleGrid|
+|AButton||Add Row|
+|AButton||Delete Row|
+<br>
+
 <img src="./img/grid1.png" height="350px" width="700px"><br>
 
-<img src="./img/grid3.png" height="350px" width="300px"><br>
+<img src="./img/grid2.png" height="350px" width="300px"><br>
  * 위의 사진을 참고하여 옵션을 변경해줍니다.
 
-### 2. Data Properties 설정하기
- * grid를 더블클릭해서 Data properties 를 오픈합니다.
- 
-<img src="./img/grid2.png" height="350px" width="600px"><br>
- * Column : 2<br>
- * Cell > Width :40 , Height : 40
- * 셀을 직접 클릭하여 text를 위와 같이 설정해줍니다.
 
+ ### 2. MainView.cls 파일을 오픈하고 다음과 같이 소스 내용을 수정합니다.
 
- ### 3.소스코딩을 이용하여 Grid에 텍스트를 설정합니다.
- ```
- 
-function MainView*onInitDone()
+ ```javascript
+ class MainView()
 {
-	super.onInitDone();
+	super();
+
+	this.inx = 0;
+	this.isAsc = true;
+
+}
+extends AView;
+```
+ ```javascript
+function MainView*init(context, evtListener)
+{
+	super.init(context, evtListener);
+
+	this.simpleGridData = 
+	[
+		['아수소프트', '40', '20150001'],
+		['아수소프트', '30', '20150002'],
+		['아수소프트', '20', '20150003']
+	];
 	
-	this.gridID.setCellText(1,0, "3명");
-	this.gridID.setCellText(1,1, "5명");
+};
+ ```
+### 3. AddBtn 에 click 이벤트를 설정합니다.
+
+```javascript
+function MainView*onAddBtnClick(comp, info, e)
+{
+	//해당 그리드 컴포넌트의 row 객체를 추가한다.
 	
+	this.simpleGrid.addRow(this.simpleGridData[this.inx]);
+	
+	this.inx++;
+	if(this.inx == 3) this.inx = 0;
 
 };
- 
- ```
+```
+
+```javascript
+//심플그리드의 셀을 선택했을 시...
+function MainView*onSimpleGridSelect(comp:AGrid, info, event)
+{
+	var cell = info[0];
+	
+	if(cell.isHeader)
+	{
+		var colInx = comp.colIndexOfCell(cell);	//선택한 cell 의 컬럼 index 를 얻어온다.
+		
+		//그리드 옵션으로 sort 기능을 활성화 할 수 있지만 
+		//샘플로 기능을 구현해 본다.
+		comp.sortColumn(colInx, this.isAsc);
+		
+		this.isAsc = !this.isAsc;
+	}
+	else
+	{
+		//파라미터로 넘어온 cell 의 row, column 정보를 배열로 리턴한다. -> [row, col]
+		var pos = comp.indexOfCell(info);
+		
+		//추가된 로우가 없는 경우
+		if(pos[0]<0) return;
+
+		//셀의 텍스트를 가져온다.
+		AToast.show( comp.getCellText(pos[0], pos[1]) );
+	}
+
+};
+```
+### 4.DeleteBtn에 click 이벤트를 설정합니다.
+
+```javascript
+function MainView*onDeleteBtnClick(comp, info, e)
+{
+	//row의 index 값을 넣으면 해당 그리드 컴포넌트의 row 객체를 삭제한다.
+	this.simpleGrid.removeRow(0);
+	
+};
+
+```
+
+### 5. AToast 를 로드합니다
+
+[00.Default_Load_Settings](.\Default_Load_Settings.md) 을 참조해주세요.
 
 ### 5.F5를 누르거나 Build > Run Project 를 클릭하여 프로젝트를 Run 합니다.<br>
 
-<img src="./img/grid4.png" height="350px" width="350px"><br>
+<img src="./img/grid3.png" height="500px" width="800px"><br>
+ * AddBtn 을 눌러 Cell이 추가 되는 것을 확인합니다.
+
+<img src="./img/grid4.png" height="500px" width="800px"><br>
+ * cell을 클릭하면 AToast가 출력되는 것을 확인합니다.

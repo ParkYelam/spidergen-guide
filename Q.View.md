@@ -18,7 +18,7 @@
  <img src="./img/view2.png" height="300px" width="550px">
 
  ### 4. 버튼을 추가합니다. 버튼에 Click 이벤트를 설정합니다.
- ```
+ ```javascript
  function T001:onAButton1Click(comp, info, e) 
 { 
 
@@ -32,7 +32,7 @@
  <img src="./img/view3.png" height="300px" width="550px">
 
   ### 4. 버튼을 추가합니다. 버튼에 Click 이벤트를 설정합니다.
- ```
+ ```javascript
  function T002:onAButton1Click(comp, info, e) 
 { 
 
@@ -55,7 +55,7 @@
  * 이 뷰들은 각각 서브뷰 T001, T002를 로드하여 보여주는 역할을 합니다.
  ### 6. load view 버튼에 click이벤트를 설정합니다.
 
- ```
+ ```javascript
  function MainView:onBtnLoadClick(comp, info, e) 
 { 
     //뷰를 로드 합니다. 

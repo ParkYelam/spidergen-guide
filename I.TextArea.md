@@ -31,7 +31,7 @@
 
 ### 2. 버튼에 클릭 이벤트를 설정합니다. 이벤트 함수 내용은 아래와 같습니다.
 
-```
+```javascript
 function MainView*onBtnAddClick(comp, info, e)
 {
     var txt = this.txt001.getText(); 
@@ -56,7 +56,7 @@ function MainView*onBtnAddClick(comp, info, e)
 
 <img src="./img/textarea2.png" height="250px" width="350px"><br>
 
-```
+```javascript
 function MainView*initText()
 {
 

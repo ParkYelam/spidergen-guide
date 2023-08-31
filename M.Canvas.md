@@ -10,12 +10,12 @@
 
  <img src="./img/canvas1.png" height="300px" width="550px">
 
- * canvas id : canvasID<br>
+ * canvas id : CanvasID<br>
  * button text : 그리기<br>
  
 ### 1. 버튼에 클릭 이벤트를 설정해줍니다.<br>
  * 아래와 같이 소스를 수정해줍니다.
-```
+```javascript
 function MainView*onAButton1Click(comp, info, e)
 {
 

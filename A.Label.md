@@ -1,5 +1,5 @@
 #  A.Label 
-라인 텍스트를 출력하는 컴포넌트 입니다.
+라인 텍스트를 출력하는 컴포넌트입니다.
 
 ## a.Label Attribute
 Label 속성입니다. 글로벌 속성은 6.Gloval Properties 속성을 참고해주세요.
@@ -26,7 +26,9 @@ Label 속성입니다. 글로벌 속성은 6.Gloval Properties 속성을 참고�
 <br>
 
 <img src="./img/Label2.png" height="350px" width="700px"><br>
- * class pane에서 ID를 'LabelID'로 입력합니다.<br><br>
+
+ * class pane에서 ID를 'LabelID'로 설정합니다.<br><br>
+ 
 <img src="./img/Label3.png" height="350px" width="700px"><br>
  * 레이아웃에서 Label에 텍스트를 설정하는 두 가지 방법입니다<br>
 1 레이아웃의 Label을 더블 클릭해서 Text를 설정할 수 있습니다<br>
@@ -38,6 +40,7 @@ Text : Label Example<br>
 ### 2. F5를 누르거나 Build > Run Project 를 클릭하여 프로젝트를 Run 합니다.
 
 <img src="./img/Label4.png" height="350px" width="250px"><br>
+
  * Label에 설정 된 텍스트가 출력되는 것을 확인할 수 있습니다
 
 ### 3.소스코딩을 이용하여 Label에 텍스트를 설정합니다.<br>
@@ -46,7 +49,7 @@ Text : Label Example<br>
  * 상단의 파일탭에서 MainView.lay 탭을 더블 클릭하거나 우측의 프로젝트 트리에서 MainView.cls 파일을 더블 클릭합니다.<br>
  * 모든 화면뷰는 onInitDone() 함수가 존재하며 이 함수는 화면이 생성될 때 딱 한번 실행됩니다.<br>
  * onInitDone() 함수에서 레이블의 텍스트 내용을 아래와 같이 코드를 입력합니다.<br>
-```
+```javascript
 function MainView*onInitDone()
 {
 	super.onInitDone();

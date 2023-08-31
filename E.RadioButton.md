@@ -30,7 +30,7 @@
 | ARadioButton |             | Rdos | 노랑 | 100 | 
 | ARadioButton |             | Rdos | 빨강 | 200 |
 | ARadioButton |             | Rdos | 초록 | 300 |
-| ALabel | rdoGroup01 | |  선택내용 | | 
+| ALabel | labelID | |  선택내용 | | 
 <br>
 
 <img src="./img/radiobtn1.png" height="350px" width="700px"><br>
@@ -47,7 +47,7 @@
   * 다수의 컴포넌트에 동일한 이벤트 함수를 매핑 할 경우 함수의 파라미터로 이벤트 발생 객체를 구분 할 수 있습니다. <br>
    * 이벤트 함수는 내용은 다음과 같이 작성합니다. <br>
    
-```
+```javascript
   function MainView*onARadioButtonsClick(comp, info, e)
 {
 

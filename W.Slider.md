@@ -26,7 +26,7 @@
 
 
 ### 2.  슬라이더에 설정된 값을 표현하기 위한 사용자 함수 doSetValue(val)를 다음과 같이 추가합니다.
-```
+```javascript
 function MainView:doSetValue(val) 
 {          
     this.labelID.setText(val); 
@@ -36,7 +36,7 @@ function MainView:doSetValue(val)
 ```
 
  ### 3. slider에 change 이벤트를 설정합니다.
- ```
+ ```javascript
  function MainView*onASlider1Change(comp, info, e)
 {
 
@@ -45,7 +45,7 @@ function MainView:doSetValue(val)
 };
  ```
  ### 4. 마지막으로 메인뷰 onInitDone() 에 슬라이더 컴포넌트의 기본값을 설정합니다.
-```
+```javascript
 function MainView*onInitDone()
 {
 	super.onInitDone();

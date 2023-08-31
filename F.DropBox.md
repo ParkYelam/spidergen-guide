@@ -24,7 +24,7 @@
 |ADropBox|drop|||
 <br>
 
-<img src="./img/dropbox.png" height="350px" width="700px"><br>
+<img src="./img/dropbox.png" height="350px" width="900px"><br>
 
 * 아래와 같이 드롭박스 클릭 후 Appearance < Display < readonly 체크해  주세요<br>
 <img src="./img/dropbox3.png" height="300px" width="200px"><br>
@@ -33,7 +33,7 @@
 
 ### 2. 등록 버튼에 클릭 이벤트를 설정합니다. 
 
-```
+```javascript
 function MainView*onBtnAddDataClick(comp, info, e)
 {
     //입력 텍스트와 데이터 값을 저장합니다. 
@@ -59,7 +59,7 @@ function MainView*onBtnAddDataClick(comp, info, e)
 ### 3. 드롭박스를 선택하고 Class Pane > Event > select 이벤트를 설정합니다.
 
 * 이벤트명은 onDropSelect라고 사용합니다. 처리 내용은 드롭박스의 아이템이 선택되면 선택된 내용을 확인하는 토스트 메시지를 출력하도록 합니다.
-```
+```javascript
 function MainView*onDropSelect(comp, info, e)
 {
 
@@ -67,7 +67,10 @@ function MainView*onDropSelect(comp, info, e)
 
 };
 ```
-### 4. F5를 누르거나 Build > Run Project 를 클릭하여 프로젝트를 Run 합니다
+### 4. AToast.js 로드하기
+[00.Default_Load_Settings](.\Default_Load_Settings.md) 을 참조해주세요.
+
+### 5. F5를 누르거나 Build > Run Project 를 클릭하여 프로젝트를 Run 합니다
 
  <img src="./img/dropbox1.png" height="300px" width="400px"><br>
 
